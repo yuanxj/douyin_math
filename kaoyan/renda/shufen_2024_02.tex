@@ -1,0 +1,129 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}  % 宏包]
+\usepackage[UTF8]{ctex}
+\usepackage{xcolor}
+
+\geometry{left=1.8cm,right=1.8cm,top=1.5cm,bottom=2cm}
+%设置页边距
+\geometry{centering}
+%版心水平垂直均居中，竖直居中：vcentering，水平居中：hcenterin
+
+\usepackage{fancyhdr}
+
+\linespread{1.25}  % 行距
+\usepackage{fancyhdr}  % 宏包
+\usepackage{lastpage}  % 获得总页数宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除页眉页脚保证默认样式不起作用
+
+\rhead{杰哥讲数学，抖音搜索 sqrt2\_1.41421}
+\usepackage{fontspec}  % 宏包
+
+
+
+%题目
+\newfontfamily\timuen{Times New Roman}   % 设置英文局部字体
+\newCJKfontfamily\timucn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\timu}[1]{\timucn \timuen #1}  % 混合中英文
+%作者：
+\newfontfamily\zzen{Times New Roman}  % 设置英文局部字体
+%\newCJKfontfamily\zzcn{simsong.ttf}  % 设置中文局部字体 仿宋
+\newCJKfontfamily\zzcn{simfang.ttf}  % 设置中文局部字体 仿宋
+\newcommand{\zz}[1]{\zzcn \zzen #1}  % 混合中英文
+%单位:
+\newfontfamily\dwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\dwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\dw}[1]{\dwcn \dwen #1}  % 混合中英文
+%摘要和关键字：
+\newfontfamily\zygjzten{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjztcn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\zygjzt}[1]{\zygjztcn \zygjzten #1}  % 混合中英文
+%摘要和关键字内容：
+\newfontfamily\zygjzen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjzcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zygjz}[1]{\zygjzcn \zygjzen #1}  % 混合中英文
+%正文内容：
+\newfontfamily\zwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zw}[1]{\zwcn \zwen #1}  % 混合中英文
+%\setmainfont{Times New Roman}
+%setCJKmainfont{SourceHanSerifSC-SemiBold.otf}
+%更改全局英文字体为Times New Roman，更改中文字题为SourceHanSerifSC-SemiBold
+%\newcommand{\kt}{\setCJKfamilyfont{simkai.ttf}}
+
+%https://www.latexstudio.net/index/details/index/mid/2967.html
+\definecolor{primary}{RGB}{42,83,193} %% Cerulean blue #2A53C1
+\definecolor{mpibpcgreen}{RGB}{190, 214, 52} %% orange yellow #FF8E00
+\definecolor{mpibpcblue}{RGB}{26, 135, 162} %% vivid green #007D34
+\definecolor{mpibpcmaroon}{RGB}{176, 88, 97} %% strong violet #53377A
+\definecolor{shelegreen}{RGB}{60, 122, 24} %% strong violet #53377A
+
+\title{\color{primary} 中国人民大学2024年考研真题}
+\date{}
+%---------------------------------------
+\begin{document}
+\pagenumbering{arabic}
+
+\maketitle
+\thispagestyle{fancy}
+\huge
+\[
+\mbox{2.(15分)\ 设f(x)在} [0,\infty) \\ \mbox{上有定义，并且一致连续，已知}
+\]
+\[
+    \lim_{n\to\infty} f(x+n) = 0\mbox{(n为自然数), 对}\forall x > 0 
+\]
+
+\begin{flushleft}
+    \quad$\mbox{证明:}\ \lim_{x\to\infty}f(x) = 0$
+\end{flushleft}
+
+
+\newpage
+\pagenumbering{arabic}
+\section{证明思路}
+\Large
+\textbf{首先我们用$\epsilon, \delta$语言来看下什么是一致连续和极限}：
+\\
+f(x)一致连续, 表示$\forall \epsilon > 0,\ \exists \delta,\ \forall |x_1 - x_2| < \delta,\ |f(x_1) - f(x_2)| < \epsilon$
+\\
+
+\textbf{其次， 我们取 x=1， 数列${f(N)}$显然收敛于 0}
+
+
+\mbox{从这里我们可以自然的想到，把(0,1)区间按照$\delta$拆成 k 段:}\\
+
+对任意的一个区间$(a_1, a_2), |a_1-a_2| < \delta, \exists N_1, \forall n>N_1, f(n+a_1) < \epsilon$ 
+那么我们取$N=max(\{N_i\}), i=1,2,3,\cdots,k$
+\\
+$\qquad\ \forall x>N, f(x) = f([x] + a_i + \delta_1)$ 其中$[x]>n, \delta_1 < \delta$
+\\
+显然,\ $|f([x] + a_i + \delta_1) - f([x]+a_i)| < \epsilon$
+\\
+到这里基本上证明已经走通了
+\newpage
+\pagenumbering{arabic}
+
+\section{开始证明}
+
+f(x)一致连续
+\[
+    \forall \epsilon > 0, \exists \delta > 0, \forall |x_1-x_2| < \delta\Rightarrow |f(x_1)-f(x_2)| < \frac{\epsilon}{2} 
+\]
+我们取$k = [\frac{1}{\delta}] + 1$
+令 $a_i = \frac{i}{k}, i=1,2,3,\cdots,k-1$ 
+\\
+显然对$\forall a_i, \exists N_i, \forall n>N_i, f(a_i+n) < \frac{\epsilon}{2}$
+\\
+我们取$N = max({N_i}),  \forall x>N, x=[x]+a_i+\delta_1, [x]>N,\delta_1<\delta,\  \\
+  f(x) = f([x]+a_i+\delta_1) < |f([x]+a_i+\delta_1) - f([x]+a_i)| + |f([x]+a_i)| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
+
+\huge
+\begin{align*}    
+    \mbox{\color{mpibpcgreen} 证毕} 
+\end{align*}
+
+\end{document}  

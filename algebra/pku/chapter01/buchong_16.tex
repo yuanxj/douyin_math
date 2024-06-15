@@ -1,0 +1,33 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{20.0pt}{\baselineskip}\selectfont
+
+\begin{align*}
+&\mbox{f(x)是一个整系数的多项式,如果f(0), f(1)都是奇数}\\
+&\mbox{证明 f(x)没有整数根}\\
+\end{align*}
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{16.0pt}{\baselineskip}\selectfont
+
+\begin{align*}
+&\mbox{设}, f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0\\
+&f(0), f(1) \equiv 1(mod2) \Longrightarrow a_0, \sum_{i=0}^{n} {a_i} \equiv 1(mod 2)\\
+&\mbox{假设存在一个整数m},f(m) = a_nm^n + a_{n-1}^n-1 + \cdots + a_0\\
+&\mbox{显然 m 是个奇数, 否则推出} a_0\equiv 0(mod2) \mbox{矛盾}\\
+&f(m) - f(1) = a_n(m^n-1) + a_{n-1}(m^{n-1}-1) + \cdots + a_1(m-1)\\
+&考虑到m^i-1 = (m-1)(m^{i-1} + m^{i-2} + \cdots + m +1)\\
+&m-1 \equiv 0(mod2) \Longrightarrow m^i-1 \equiv 0(mod2)\\
+&\Longrightarrow f(m) - f(1) \equiv 0(mod2)\\
+\\
+&\mbox{矛盾}
+\end{align*
+\end{document}

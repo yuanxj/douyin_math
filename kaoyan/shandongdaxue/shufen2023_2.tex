@@ -1,0 +1,41 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{25.0pt}{\baselineskip}\selectfont
+
+\begin{center}
+    \color{ForestGreen} 2023年山东大学数学分析真题
+\end{center}
+
+\fontsize{25.0pt}{\baselineskip}\selectfont
+\begin{align*}
+&\mbox{(15分)}\quad a_n>0, \lim_{n\to\infty}sup{\sqrt[n]{a_n}} <= 1， \\
+&\quad\quad\mbox{证明：}\forall l>1, \lim_{n\to\infty}\frac{a_n}{l^n} = 0
+\end{align*}
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{20.0pt}{\baselineskip}\selectfont
+
+\begin{align*}
+&\mbox{我们仅需证明，对}\forall l > 1, \forall \epsilon>0, \exists N, \forall n > N , \frac{a_n}{l^n} < \epsilon &\\
+\\
+&\lim_{n\to\infty}sup{\sqrt[n]{a_n}} <= 1 &\\
+&\Longrightarrow \exists N_1, \forall n>N_1, \sqrt[n]{a_n} < 1+\frac{l-1}{2}\\
+\\
+&\mbox{显然} \quad\quad 0<1+\frac{l-1}{2}<l &\\
+&\Longrightarrow \lim_{n\to\infty} (\frac{1+\frac{l-1}{2}}{l})^n = 0&\\
+&\Longrightarrow \exists N_2, \forall n>N_2, (\frac{1+\frac{l-1}{2}}{l})^n < \epsilon &\\
+&\mbox{取} N = max\{N_1, N_2\}, \forall n>N, &\\
+&\frac{a_n}{l^n} = (\frac{\sqrt[n]{a_n}}{l})^n \le (\frac{1+\frac{l-1}{2}}{l})^n < \epsilon &\\
+\\
+&\mbox{证毕}&
+\end{align*}
+
+\end{document}

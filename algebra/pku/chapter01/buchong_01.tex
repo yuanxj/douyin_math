@@ -1,0 +1,36 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{25.0pt}{\baselineskip}\selectfont
+
+$$\mbox{设}f_1(x)=af(x)+bg(x), g_1(x)=cf(x)+dg(x)$$
+$$\mbox{且} ad-bc\ne0$$
+$$\\$$
+$$\quad\quad\mbox{证明：} (f(x), g(x)) = (f_1(x), g_1(x))$$  
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{16.0pt}{\baselineskip}\selectfont
+
+\begin{align*}
+&\mbox{设}u(x) = (f(x), g(x)), v(x) = (f_1(x), g_1(x))\\
+&u(x) | f(x), u(x) | g(x) \Longrightarrow u(x)|af(x) + bg(x),u(x) | cf(x) + dg(x)\\
+&\mbox{即}ux(x) | f_1(x) , u(x) | g_1(x) \Longrightarrow u(x) | (f_1(x), g_1(x)) = v(x) \\
+&f_1(x) = af(x) + bg(x) \Longrightarrow df_1(x) = adf(x) + bdg(x)\\
+&g_1(x) = cf(x) + dg(x) \Longrightarrow  bg_1(x) = bcf(x) + bdg(x)\\
+&(ad-bc) f_1(x) = df_1(x) - bg_1(x) \\
+&\qquad\Longrightarrow f(x) = \frac{d}{ad-bc}f_1(x) + \frac{b}{bc-ad}g_1(x)\\
+&\mbox{同理} g(x) = \frac{a}{bc-ad}f_1(x) + \frac{c}{ad-bc}g_1(x)\\
+\\
+&\mbox{由前面的结论易知} v(x) | u(x)\\
+&\Longrightarrow u(x) | v(x), v(x) | u(x), u(x) = v(x)\\
+&\mbox{证毕}
+\end{align*}
+
+\end{document}

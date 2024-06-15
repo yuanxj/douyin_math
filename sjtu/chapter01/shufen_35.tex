@@ -1,0 +1,35 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{25.0pt}{\baselineskip}\selectfont
+
+\fontsize{20.0pt}{\baselineskip}\selectfont
+\begin{align*}
+a_n =\frac{sinx}{1^2} + \frac{sin2x}{2^2} + \cdots + \frac{sinnx}{n^2},\mbox{证明}\{a_n\}\mbox{收敛}
+\end{align*}
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{16.0pt}{\baselineskip}\selectfont
+
+
+\begin{align*}
+&a_{n+p} - a_n = \frac{sin(n+1)x}{(n+1)^2} + \frac{sin(n+2)x}{(n+2)^2} + \cdots + \frac{sin(n+p)x}{(n+p)^2}\\
+&|a_{n+p} - a_n| \le |\frac{sin(n+1)x}{(n+1)^2}| + |\frac{sin(n+2)x}{(n+2)^2}| + \cdots + |\frac{sin(n+p)x}{(n+p)^2}|\\
+&\quad\quad\le|\frac{1}{(n+1)^2}| + |\frac{1}{(n+2)^2}| + \cdots + |\frac{1}{(n+p)^2}|\\
+&\quad\quad\le|\frac{1}{(n+1)(n)}| + |\frac{1}{(n+2)(n+1)}| + \cdots + |\frac{1}{(n+p)(n+p-1))}|\\
+&\quad\quad\le(\frac{1}{n-1} - \frac{1}{n}) + (\frac{1}{n}-\frac{1}{n+1}) + \cdots + (\frac{1}{n+p-1} - \frac{1}{n+p})\\
+&\quad\quad=\frac{1}{n-1} - \frac{1}{n+p}\\
+&\quad\quad\le\frac{1}{n-1}\\
+&\forall \epsilon > 0,\frac{1}{n-1} < \epsilon,\mbox{取N}=【\frac{1}{\epsilon}】+ 1\\
+&\forall p \in \mathbb{N}, n>N, |a_{n+p} - a_n| < \epsilon\\
+&\mbox{根据柯西收敛定理，得证}&
+\end{align*}
+
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}  % 宏包]
+\usepackage[UTF8]{ctex}
+\usepackage{xcolor}
+
+\geometry{left=1.8cm,right=1.8cm,top=1.5cm,bottom=2cm}
+%设置页边距
+\geometry{centering}
+%版心水平垂直均居中，竖直居中：vcentering，水平居中：hcenterin
+
+\usepackage{fancyhdr}
+
+\linespread{1.25}  % 行距
+\usepackage{fancyhdr}  % 宏包
+\usepackage{lastpage}  % 获得总页数宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除页眉页脚保证默认样式不起作用
+
+\rhead{杰哥讲数学，抖音搜索 sqrt2\_1.41421}
+\usepackage{fontspec}  % 宏包
+
+
+
+%题目
+\newfontfamily\timuen{Times New Roman}   % 设置英文局部字体
+\newCJKfontfamily\timucn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\timu}[1]{\timucn \timuen #1}  % 混合中英文
+%作者：
+\newfontfamily\zzen{Times New Roman}  % 设置英文局部字体
+%\newCJKfontfamily\zzcn{simsong.ttf}  % 设置中文局部字体 仿宋
+\newCJKfontfamily\zzcn{simfang.ttf}  % 设置中文局部字体 仿宋
+\newcommand{\zz}[1]{\zzcn \zzen #1}  % 混合中英文
+%单位:
+\newfontfamily\dwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\dwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\dw}[1]{\dwcn \dwen #1}  % 混合中英文
+%摘要和关键字：
+\newfontfamily\zygjzten{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjztcn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\zygjzt}[1]{\zygjztcn \zygjzten #1}  % 混合中英文
+%摘要和关键字内容：
+\newfontfamily\zygjzen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjzcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zygjz}[1]{\zygjzcn \zygjzen #1}  % 混合中英文
+%正文内容：
+\newfontfamily\zwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zw}[1]{\zwcn \zwen #1}  % 混合中英文
+%\setmainfont{Times New Roman}
+%setCJKmainfont{SourceHanSerifSC-SemiBold.otf}
+%更改全局英文字体为Times New Roman，更改中文字题为SourceHanSerifSC-SemiBold
+%\newcommand{\kt}{\setCJKfamilyfont{simkai.ttf}}
+
+\definecolor{primary}{RGB}{42,83,193} %% Cerulean blue #2A53C1
+\definecolor{mpibpcgreen}{RGB}{190, 214, 52} %% orange yellow #FF8E00
+\definecolor{mpibpcblue}{RGB}{26, 135, 162} %% vivid green #007D34
+\definecolor{mpibpcmaroon}{RGB}{176, 88, 97} %% strong violet #53377A
+
+\title{\color{primary} 上海交通大学数学分析课后题}
+\date{}
+%---------------------------------------
+\begin{document}
+\pagenumbering{arabic}
+
+
+\maketitle
+\thispagestyle{fancy}
+\huge
+$$
+\mbox{设} x_i \in (0,1), x_{n+1} = x_n(1-x_n) (n = 1,2,3,\cdots)
+$$
+$$
+\mbox{证明：}\{nx_n\}\mbox{收敛并求其极限}
+$$
+
+\newpage
+\pagenumbering{arabic}
+\section{证明思路}
+\Large
+\textbf{首先$\{x_n\}$递减有界，所以必收敛}：
+\\
+\[{x_{n+1} - x_n = - x_n^2} < 0\]
+
+\textbf{其次$\{nx_n\}$n和$x_n$都单调，并且 n 趋近于$\infty$}：
+
+看到这个形式我们需要想到 Stolz 定理m， 即：\\
+设${b_n}$单调，并且 \[\lim_{n\to\infty} b_n = \infty\]
+\quad 如果\[\lim_{n\to\infty} \frac{a_{n}-a_{n-1}}{b_{n}-b_{n-1}}=A \]
+\quad 那么\[\lim_{n\to\infty} \frac{a_{n}}{b_{n}}=A \]
+
+我们需要一点点小小的技巧
+\[nx_n = \frac{n}{\frac{1}{x_n}}\]
+
+\newpage
+\pagenumbering{arabic}
+
+\section{开始证明}
+\[{x_{n+1} - x_n = - x_n^2} < 0\]
+${x_n}$单调递减，并且有界, 所以必收敛，我们设 \[\lim_{n\to\infty}x_n = a\]
+$x_{n+1} = x_n(1-x_n)$,我们两边同时取极限有$a = a(1-a) \Rightarrow a = 0$\\
+
+\[nx_n = \frac{n}{\frac{1}{x_n}}\]我们看看这个数列\[\{\frac{(n+1) - n}{\frac{1}{x_{n+1}} - \frac{1}{x_n}}\}\]
+
+\[\frac{(n+1) - n}{\frac{1}{x_{n+1}} - \frac{1}{x_n}} = \frac{1}{\frac{1}{x_{n+1}} - \frac{1}{x_n}} = \frac{x_nx_{n+1}}{x_n-x_{n+1}} = \frac{x_nx_{n+1}}{x_n^2} = \frac{x_{n+1}}{x_n} = 1-x_n\]
+\[\lim_{n\to\infty} x_n = 0 \Longrightarrow \lim_{n\to\infty} (1-x_n) = 1\]
+\\
+
+由 Stolz 定理知，$\{nx_n\}$收敛，并且收敛于 1
+
+\huge
+\begin{align*}    
+    \mbox{\color{mpibpcgreen} 证毕} 
+\end{align*}
+
+\end{document}  

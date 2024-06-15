@@ -1,0 +1,30 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{25.0pt}{\baselineskip}\selectfont
+
+$$\mbox{如果多项式}f(x)|f(x^n), \mbox{那么f(x)只能有}$$
+$$\mbox{0根或者单位根}$$
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{16.0pt}{\baselineskip}\selectfont
+
+\begin{align*}
+&\mbox{设}\omega\mbox{是}f(x)\mbox{的根}\\
+&f(\omega) = 0 , f(x) | f(x^n)\Longrightarrow f(\omega^n) = 0\\
+&\mbox{即}\omega^n\mbox{的根}\\
+&f(x) | f(x^n),\mbox{显然},\omega,\omega^n,\omega^{n^2},\omega^{n^3},\cdots,\omega^{n^n},\omega^{n^(n+1)}\mbox{都是 f(x)的根}\\
+&\mbox{假设} |\omega| != 0,|\omega| != 1\\
+&\mbox{推出f(x)有 n+1 个根，矛盾}\\
+&\\
+&\mbox{得证}
+\end{align*}
+
+\end{document}

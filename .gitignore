@@ -1,0 +1,5 @@
+vmlinux*
+.DS_Store
+*.log
+*.gz
+*.aux

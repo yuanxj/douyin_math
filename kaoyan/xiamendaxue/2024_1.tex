@@ -1,0 +1,51 @@
+\documentclass{ctexart}
+% Required package
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{bm}
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+\fontsize{30.0pt}{\baselineskip}\selectfont
+
+\begin{center}
+    \color{ForestGreen} 2024年厦门大学数学分析
+\end{center}
+
+\fontsize{25.0pt}{\baselineskip}\selectfont
+\begin{flushleft}
+\makebox[5em][l]{1.(15分)求极限}
+\end{flushleft}
+$$\lim_{n\to\infty}\frac{1\cdot{1!} + 2\cdot{2!} + \cdots + n\cdot{n!}}{(n+1)!}$$  
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{20.0pt}{\baselineskip}\selectfont
+
+方法 1：
+\begin{align*}
+&\forall k \in \mathbb{N}, k\cdot{k!} = (k+1)!-k! \\
+&\lim_{n\to\infty}\frac{1\cdot{1!} + 2\cdot{2!} + \cdots + n\cdot{n!}}{(n+1)!} \\
+&= \lim_{n\to\infty}\frac{\sum_{k=1}^{n}{k\cdot{k!}}}{(n+1)!} \\
+&= \lim_{n\to\infty}\frac{\sum_{k=1}^{n}{(k+1)!-k!}}{(n+1)!} \\
+&= \lim_{n\to\infty}\frac{(k+1)!-1!}{(n+1)!} \\
+&= 1 - \lim_{n\to\infty}\frac{1}{(n+1)!} \\
+&= 1
+\end{align*}
+
+\pagenumbering{arabic}
+\newpage
+\pagenumbering{arabic}
+\fontsize{16.0pt}{\baselineskip}\selectfont
+
+方法 2：
+\begin{align*}
+&\mbox{分母递增，根据 stolz 定理， 对于极限：}\\
+&\lim_{n\to\infty}\frac{1\cdot{1!} + 2\cdot{2!} + \cdots + n\cdot{n!}}{(n+1)!} \\
+&\mbox{我们只需要求出下式的极限即可：}\\
+&\frac{(1\cdot{1!} + 2\cdot{2!} + \cdots + n\cdot{n!}) - (1\cdot{1!} + 2\cdot{2!} + \cdots + (n-1)\cdot{(n-1)!})}{(n+1)!-n!}\\
+&=\frac{n\cdot{n!}}{n\cdot{n!}}\\
+&=1
+\end{align*}
+\end{document}

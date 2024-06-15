@@ -1,0 +1,61 @@
+\documentclass[12pt]{report}
+% Required package
+\usepackage{amssymb}
+\usepackage{CJKutf8}
+
+\begin{document}
+$$
+f(x) = \frac{x}{\sqrt{1+x^2}}, (\underbrace{f\circ f\circ\cdot\cdot\cdot\circ f}_{n})(x),
+$$
+$$
+f(f(x)) = \frac{f(x)}{\sqrt{1+f(x)^2}} = \frac{\frac{x}{\sqrt{1+x^2}}}{\sqrt{1+\frac{x^2}{1+x^2}}}
+=\frac{x}{\sqrt{1+x^2+1+x^2}} = \frac{x}{\sqrt{1+2x^2}} 
+f(f(f(x)) = \frac{x}{\sqrt{1+3x^2}} 
+\\
+\\
+\\
+\\
+$$
+$$
+f: \mathbb{R} \rightarrow \mathbb{R}, f \circ f = \mathbb{I}
+$$
+$$
+\frac{f(x)}{x} \Longrightarrow \frac{f(x_1+x_2)}{x_1+x_2} \leq \frac{f(x_1)}{x_1}\leq\frac{f(x_2)}{x_2}
+$$
+$$
+\lim_{n\to\infty} \sqrt[n]{\left[a\left[a\left[\cdots\left[a\left[a\right]\right]\cdots\right]\right]\right]}
+$$
+$$
+\lim_{n\to\infty}\left(\frac{1}{\sqrt{n^2+1}} + \frac{1}{\sqrt{n^2+2}} + \cdots + \frac{1}{\sqrt{n^2+n}}\right)
+$$
+
+$$
+\lim_{n\to\infty}\left(\frac{1}{\sqrt{n^2+1}} + \frac{1}{\sqrt{n^2+2}} + \cdots + \frac{1}{\sqrt{n^2+n}}\right)
+$$
+
+$$
+x_n = sin1 + \frac{\sin 2}{2!} + \frac{\sin 3}{3!} + \cdots + \frac{\sin n}{n!}
+\\
+\forall n \in \mathbb{N}, n>0, n!\ge n(n-1) \Longrightarrow \frac{1}{n!} \le \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}
+\\
+\\
+\\
+|x_n| = |sin1 + \frac{\sin 2}{2!} + \frac{\sin 3}{3!} + \cdots + \frac{\sin n}{n!}| \leq|sin1| + |\frac{\sin 2}{2!}| + |\frac{\sin 3}{3!}| + \cdots + |\frac{\sin n}{n!}|
+\leq \sum_{1}^{n}{1/n!}
+$$
+
+
+$$
+\lim_{n\to\infty}{a_n} = a, \lim_{n\to\infty}{b_n} = b,\lim_{n\to\infty} \frac{\sum_{i=1}^{n}{a_ib_{i}}}{n}
+$$
+
+$$
+\frac{|x_{n+1}-x_n|}{|x_n-x_{n-1}|}
+$$
+
+$$
+\lim_{n\to\infty}{\frac{\sqrt[n]{n!}}{n}} = \frac{1}{e}
+$$
+
+
+\end{document}

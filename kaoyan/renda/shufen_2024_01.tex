@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}  % 宏包]
+\usepackage[UTF8]{ctex}
+\usepackage{xcolor}
+
+\geometry{left=1.8cm,right=1.8cm,top=1.5cm,bottom=2cm}
+%设置页边距
+\geometry{centering}
+%版心水平垂直均居中，竖直居中：vcentering，水平居中：hcenterin
+
+\usepackage{fancyhdr}
+
+\linespread{1.25}  % 行距
+\usepackage{fancyhdr}  % 宏包
+\usepackage{lastpage}  % 获得总页数宏包
+\pagestyle{fancy}
+\fancyhf{}  % 清除页眉页脚保证默认样式不起作用
+
+\rhead{杰哥讲数学，抖音搜索 sqrt2\_1.41421}
+\usepackage{fontspec}  % 宏包
+
+
+
+%题目
+\newfontfamily\timuen{Times New Roman}   % 设置英文局部字体
+\newCJKfontfamily\timucn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\timu}[1]{\timucn \timuen #1}  % 混合中英文
+%作者：
+\newfontfamily\zzen{Times New Roman}  % 设置英文局部字体
+%\newCJKfontfamily\zzcn{simsong.ttf}  % 设置中文局部字体 仿宋
+\newCJKfontfamily\zzcn{simfang.ttf}  % 设置中文局部字体 仿宋
+\newcommand{\zz}[1]{\zzcn \zzen #1}  % 混合中英文
+%单位:
+\newfontfamily\dwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\dwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\dw}[1]{\dwcn \dwen #1}  % 混合中英文
+%摘要和关键字：
+\newfontfamily\zygjzten{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjztcn{simhei.ttf}  % 设置中文局部字体 黑体
+\newcommand{\zygjzt}[1]{\zygjztcn \zygjzten #1}  % 混合中英文
+%摘要和关键字内容：
+\newfontfamily\zygjzen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zygjzcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zygjz}[1]{\zygjzcn \zygjzen #1}  % 混合中英文
+%正文内容：
+\newfontfamily\zwen{Times New Roman}  % 设置英文局部字体
+\newCJKfontfamily\zwcn{simsun.ttc}  % 设置中文局部字体 宋体
+\newcommand{\zw}[1]{\zwcn \zwen #1}  % 混合中英文
+%\setmainfont{Times New Roman}
+%setCJKmainfont{SourceHanSerifSC-SemiBold.otf}
+%更改全局英文字体为Times New Roman，更改中文字题为SourceHanSerifSC-SemiBold
+%\newcommand{\kt}{\setCJKfamilyfont{simkai.ttf}}
+
+%https://www.latexstudio.net/index/details/index/mid/2967.html
+\definecolor{primary}{RGB}{42,83,193} %% Cerulean blue #2A53C1
+\definecolor{mpibpcgreen}{RGB}{190, 214, 52} %% orange yellow #FF8E00
+\definecolor{mpibpcblue}{RGB}{26, 135, 162} %% vivid green #007D34
+\definecolor{mpibpcmaroon}{RGB}{176, 88, 97} %% strong violet #53377A
+\definecolor{shelegreen}{RGB}{60, 122, 24} %% strong violet #53377A
+
+\title{\color{primary} 中国人民大学2024年考研真题}
+\date{}
+%---------------------------------------
+\begin{document}
+\pagenumbering{arabic}
+
+\maketitle
+\thispagestyle{fancy}
+\huge
+\[
+\mbox{1.(15分)\ 已知 n 为正整数，求极限} \lim_{n\to\infty}\sum_{i=1}^{n}\frac{sin \frac{i\pi}{n}}{n+\frac{i}{n}}
+\]
+
+
+\newpage
+\pagenumbering{arabic}
+\section{证明思路}
+\Large
+\textbf{首先我们我们看到对$\frac{i}{n}$求和，我们要想到积分}：
+\\
+我们先忽略掉分母中的 n，显然 
+\\
+\[
+    \lim_{n\to\infty}\sum_{i=1}^{n}\frac{1}{n}sin \frac{i\pi}{n} = \int_{0}^{1} sin\pi xdx
+\]
+\\
+\\
+
+\textbf{其次， 我们需要一定的放缩技巧,即:}
+\[
+    n < n+\frac{i}{n} < n+1
+\]
+
+\newpage
+
+\section{开始计算}
+我们先计算这个值
+\[
+    \lim_{n\to\infty}\sum_{i=1}^{n}\frac{1}{n}sin \frac{i\pi}{n} = \int_{0}^{1} sin\pi xdx = \frac{-cos\pi x}{\pi}|_{0}^{1} = \frac{2}{\pi}
+\]
+\[
+    \lim_{n\to\infty}\sum_{i=1}^{n}\frac{sin \frac{i\pi}{n}}{n+\frac{i}{n}} = \lim_{n\to\infty}\sum_{i=1}^{n}\frac{n}{n+\frac{i}{n}}\frac{sin \frac{i\pi}{n}}{n} 
+\]
+\[
+    \lim_{n\to\infty}\sum_{i=1}^{n}\frac{n}{n+1}\frac{sin \frac{i\pi}{n}}{n} < \lim_{n\to\infty}\sum_{i=1}^{n}\frac{n}{n+\frac{i}{n}}\frac{sin \frac{i\pi}{n}}{n} < \lim_{n\to\infty}\sum_{i=1}^{n}\frac{sin \frac{i\pi}{n}}{n} 
+\]
+\[
+    \mbox{显然}\lim_{n\to\infty}\frac{n}{n+1} = 1
+\]
+
+根据迫敛定理得
+\[
+    \lim_{n\to\infty}\sum_{i=1}^{n}\frac{sin \frac{i\pi}{n}}{n+\frac{i}{n}} = \frac{2}{\pi}
+\]
+
+
+\huge
+\begin{align*}    
+    \mbox{\color{mpibpcgreen} 证毕} 
+\end{align*}
+
+\end{document}  
